@@ -1,0 +1,28 @@
+<template>
+  <i class="iconfont icon-container" :class="iconClass"></i>
+</template>
+
+<script>
+const iconMap = {
+  home: "icon-home",
+  blog: "icon--blog"
+};
+export default {
+  name: "Icon",
+  props: {
+    type: {
+      type: String,
+      required: true,
+    },
+  },
+  computed: {
+    iconClass: function () {
+      return iconMap[this.type];
+    },
+  },
+};
+</script>
+
+<style scoped>
+@import "//at.alicdn.com/t/c/font_3711371_tsfbr039k4.css";
+</style>
