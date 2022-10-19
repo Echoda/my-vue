@@ -1,3 +1,4 @@
+<!-- vue serve src/components/Avatar/test.vue -->
 <template>
   <img class="Avatar-container" :src="url" :style="{width: size + 'px', height: size + 'px'}">
 </template>

@@ -1,3 +1,4 @@
+<!-- vue serve src/components/Icon/test.vue -->
 <template>
   <i class="iconfont icon-container" :class="iconClass"></i>
 </template>

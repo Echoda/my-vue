@@ -1,22 +1,15 @@
 <template>
   <div id="app">
-    <Avatar url="https://iconfont.alicdn.com/p/avatar/Jy7B4vBnpdOl.jpeg" :size="100"/>
-    <Icon type="home" />
-    <Icon type="blog" />
     <Pager :total="total" :current="current" @page-change="handlePageChange"/>
   </div>
 </template>
 
 <script>
-import Avatar from './components/Avatar'
-import Icon from './components/Icon'
-import Pager from './components/Pager'
+import Pager from './'
 
 export default {
   name: 'App',
   components: {
-    Avatar,
-    Icon,
     Pager
   },
   data() {
@@ -35,8 +28,4 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.icon-container{
-  font-size: 40px;
-  color: palegreen;
-}
 </style>
