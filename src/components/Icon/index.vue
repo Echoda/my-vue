@@ -6,7 +6,11 @@
 <script>
 const iconMap = {
   home: "icon-home",
-  blog: "icon--blog"
+  blog: "icon--blog",
+  about: "icon-guanyu_o",
+  message: "icon-liuyanban-05",
+  code: "icon-code",
+  empty: "icon-empty"
 };
 export default {
   name: "Icon",
@@ -25,5 +29,5 @@ export default {
 </script>
 
 <style scoped>
-@import "//at.alicdn.com/t/c/font_3711371_tsfbr039k4.css";
+@import "//at.alicdn.com/t/c/font_3711371_hrnpntfsho.css";
 </style>

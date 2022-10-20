@@ -1,6 +1,8 @@
 <!-- vue serve src/components/Avatar/test.vue -->
 <template>
-  <img class="Avatar-container" :src="url" :style="{width: size + 'px', height: size + 'px'}">
+  <div class="avatar-container">
+    <img :src="url" :style="{width: size + 'px', height: size + 'px'}"/>
+  </div>
 </template>
 
 <script>
@@ -20,10 +22,16 @@ export default {
 }
 </script>
 
-<style scoped>
-.Avatar-container{
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
+<style lang="less" scoped>
+.avatar-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img{
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
 }
 </style>
