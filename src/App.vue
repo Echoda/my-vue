@@ -1,32 +1,32 @@
 <template>
   <div id="app">
     <Layout>
-        <template #left>
-          <SiteAside></SiteAside>
-        </template>
-        <template #main>
-          <RouterView />
-        </template>
-      </Layout>
+      <template #left>
+        <SiteAside></SiteAside>
+      </template>
+      <template #main>
+        <RouterView />
+      </template>
+    </Layout>
   </div>
 </template>
 
 <script>
-import SiteAside from '@/components/SiteAside'
-import Layout from '@/components/Layout'
-
+import SiteAside from "@/components/SiteAside";
+import Layout from "@/components/Layout";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     SiteAside,
-    Layout
-  }
-}
+    Layout,
+  },
+};
 </script>
 
 <style lang="less" scoped>
-.left, .right{
-    background: goldenrod;
-  }
+.left,
+.right {
+  background: goldenrod;
+}
 </style>

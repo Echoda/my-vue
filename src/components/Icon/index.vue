@@ -10,7 +10,11 @@ const iconMap = {
   about: "icon-guanyu_o",
   message: "icon-liuyanban-05",
   code: "icon-code",
-  empty: "icon-empty"
+  empty: "icon-empty",
+  success: "icon-success",
+  error: "icon-error",
+  warn: "icon-warning",
+  info: "icon-information",
 };
 export default {
   name: "Icon",
@@ -29,5 +33,5 @@ export default {
 </script>
 
 <style scoped>
-@import "//at.alicdn.com/t/c/font_3711371_hrnpntfsho.css";
+@import "//at.alicdn.com/t/c/font_3711371_9muoftlo5xk.css";
 </style>
