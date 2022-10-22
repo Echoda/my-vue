@@ -1,42 +1,31 @@
 <template>
   <div id="app">
-    <Avatar url="https://iconfont.alicdn.com/p/avatar/Jy7B4vBnpdOl.jpeg" :size="100"/>
-    <Icon type="home" />
-    <Icon type="blog" />
-    <Pager :total="total" :current="current" @page-change="handlePageChange"/>
+    <Layout>
+        <template #left>
+          <SiteAside></SiteAside>
+        </template>
+        <template #main>
+          <div class="main">主区域</div>
+        </template>
+      </Layout>
   </div>
 </template>
 
 <script>
-import Avatar from './components/Avatar'
-import Icon from './components/Icon'
-import Pager from './components/Pager'
+import SiteAside from '@/components/SiteAside'
+import Layout from '@/components/Layout'
 
 export default {
   name: 'App',
   components: {
-    Avatar,
-    Icon,
-    Pager
-  },
-  data() {
-    return {
-      current: 7,
-      total: 100
-    }
-  },
-  methods: {
-    handlePageChange(page) {
-      console.log('page', page);
-      this.current = page
-    }
-  },
+    SiteAside,
+    Layout
+  }
 }
 </script>
 
 <style lang="less" scoped>
-.icon-container{
-  font-size: 40px;
-  color: palegreen;
-}
+.left, .right{
+    background: goldenrod;
+  }
 </style>

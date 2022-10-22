@@ -1,5 +1,5 @@
 <template>
-  <div class="site-aside-container" :style="{background: background}">
+  <div class="site-aside-container" :style="{background: background, width: `${width}px`}">
     <Avatar url="https://iconfont.alicdn.com/p/avatar/Jy7B4vBnpdOl.jpeg" :size="120" />
     <Menu />
   </div>
@@ -20,6 +20,10 @@ export default {
     background: {
       type: String,
       default: '#333'
+    },
+    width: {
+      type: Number,
+      default: 200
     }
   }
 
