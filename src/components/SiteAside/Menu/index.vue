@@ -1,14 +1,16 @@
 <template>
   <div class="menu-container">
-    <a
+    <RouterLink
       v-for="item in menu"
-      :key="item.link"
-      :href="item.link"
-      :class="{ isActive: isActive(item) }"
+      :key="item.name"
+      :to="{ name: item.name }"
+      :exact="item.exact"
+      active-class="active"
+      exact-active-class=""
     >
       <Icon :type="item.icon" />
       <span>{{ item.text }}</span>
-    </a>
+    </RouterLink>
   </div>
 </template>
 
@@ -24,43 +26,37 @@ export default {
     return {
       menu: [
         {
-          link: "/",
+          name: "home",
           icon: "home",
           text: "首页",
+          exact: true,
         },
         {
-          link: "/blog",
+          name: "blog",
           icon: "blog",
           text: "文章",
-          startWith: true,
+          exact: false,
         },
         {
-          link: "/project",
+          name: "project",
           icon: "code",
           text: "项目&效果",
+          exact: true,
         },
         {
-          link: "/about",
+          name: "about",
           icon: "about",
           text: "关于我",
+          exact: true,
         },
         {
-          link: "/message",
+          name: "message",
           icon: "message",
           text: "留言",
+          exact: true,
         },
       ],
     };
-  },
-  methods: {
-    isActive: function (item) {
-      const pathname = location.pathname;
-      if (item.startWith) {
-        return pathname.startsWith(item.link);
-      } else {
-        return pathname === item.link;
-      }
-    },
   },
 };
 </script>
@@ -83,7 +79,7 @@ export default {
     }
   }
 
-  .isActive {
+  .active {
     background: rgba(0, 0, 0, 0.3);
     color: #fff;
   }

@@ -5,7 +5,7 @@
           <SiteAside></SiteAside>
         </template>
         <template #main>
-          <div class="main">主区域</div>
+          <RouterView />
         </template>
       </Layout>
   </div>
@@ -14,6 +14,7 @@
 <script>
 import SiteAside from '@/components/SiteAside'
 import Layout from '@/components/Layout'
+
 
 export default {
   name: 'App',
