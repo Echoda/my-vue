@@ -6,18 +6,13 @@
 </template>
 
 <script>
-export default {
+import { getBlogType } from '@/api/blog'
+
+export default {  
   methods: {
-    handleClick() {
-      this.$message({
-        // type: 'warn',
-        msg: 'sdjkvjksjv',
-        duration: 1000,
-        callback: function() {
-          console.log('callback run')
-        },
-        // container: this.$refs.home
-      })
+    async handleClick() {
+      const res = await getBlogType()
+      console.log('res', res);
     }
   },
 }

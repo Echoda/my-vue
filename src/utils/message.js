@@ -5,6 +5,7 @@ import Icon from '@/components/Icon'
  * @desc 展示message
  * @param {String} info // message消息体
  * @param {Number} duration // 展示时长
+ * @param {String} type // 消息类型
  * @param {Element} container // 展示message的容器
  * @param {Function} callback // 回调
  * 
