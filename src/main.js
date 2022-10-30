@@ -9,6 +9,10 @@ import '@/mock/index'
 import { message } from '@/utils/index'
 Vue.prototype.$message = message;
 
+// 注册全局指令
+import vLoading from '@/directives/loading'
+Vue.directive('loading', vLoading)
+
 new Vue({
   router,
   render: h => h(App),
