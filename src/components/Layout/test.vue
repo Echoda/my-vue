@@ -5,7 +5,7 @@
         <template #left>
           <div class="left">头部</div>
         </template>
-        <template #main>
+        <template>
           <div class="main">主区域</div>
         </template>
         <template #right>

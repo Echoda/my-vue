@@ -1,8 +1,14 @@
 <template>
   <div class="layout-container">
-    <slot name="left" class="left" ></slot>
-    <slot name="main" class="mian"></slot>
-    <slot name="right" class="right"></slot>
+    <div class="left">
+      <slot name="left"></slot>
+    </div>
+    <div class="main">
+      <slot></slot>
+    </div>
+    <div class="right">
+      <slot name="right"></slot>
+    </div>
   </div>
 </template>
 
@@ -22,6 +28,7 @@ export default {
     height: 100%;
     flex: 0 0 auto;
     overflow: hidden;
+    position: relative;
   }
   .main{
     flex: 1 1 auto;

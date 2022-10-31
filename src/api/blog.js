@@ -4,3 +4,8 @@ import request from './request';
 export async function getBlogType() {
   return await request.get('/api/blogtype')
 }
+
+// 分页获取博客
+export async function getBlog() {
+  return await request.get('/api/blog')
+}

@@ -4,7 +4,7 @@
       <template #left>
         <SiteAside></SiteAside>
       </template>
-      <template #main>
+      <template>
         <RouterView />
       </template>
     </Layout>
