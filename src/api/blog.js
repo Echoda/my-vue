@@ -6,6 +6,12 @@ export async function getBlogType() {
 }
 
 // 分页获取博客
-export async function getBlog() {
-  return await request.get('/api/blog')
+export async function getBlog(pageNum = 1, limit = 10, categoryId = -1) {
+  return await request.get('/api/blog', {
+    params: {
+      pageNum,
+      limit,
+      categoryId
+    }
+  })
 }

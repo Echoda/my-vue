@@ -81,6 +81,7 @@ export default {
 .pager-container {
   display: flex;
   justify-content: center;
+  padding: 10px 0;
 
   a {
     padding: 0 5px;

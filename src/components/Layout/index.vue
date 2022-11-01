@@ -31,6 +31,7 @@ export default {
     position: relative;
   }
   .main{
+    height: 100%;
     flex: 1 1 auto;
     overflow: hidden;
   }

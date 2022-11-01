@@ -6,7 +6,7 @@ function createLoading(el) {
   const img = document.createElement('img')
   img.dataset.role = 'loading'
   img.src = loadingUrl
-  img.className = styles.loadingUrl
+  img.className = styles.loading
   el.appendChild(img)
 }
 

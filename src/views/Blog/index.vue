@@ -50,10 +50,10 @@ export default {
 
 <style lang="less" scoped>
 .right-container {
-  width: 250px;
+  width: 230px;
   height: calc(100% - 25px);
   overflow-y: auto;
-  padding: 10px 0;
+  padding: 10px 0 10px 10px;
 
   .title {
     margin: 10px 0;
