@@ -20,43 +20,41 @@ export default {
   },
   mixins: [fetchData()],
 
-  data() {
-    return {
-      categoryId: null,
-      isLoading: true,
-    };
-  },
-
   computed: {
+    categoryId: function () {
+      return this.$route.params.categoryId || -1;
+    },
+
     list: function () {
-      return this.data?.map((it) => {
+      const res = [
+        {
+          id: -1,
+          name: "全部",
+        },
+        ...this.data,
+      ];
+
+      return res.map((it) => {
         return { ...it, isSelect: it.id === this.categoryId };
       });
     },
   },
 
-  watch: {
-    "$route.params": {
-      handler: function (newVal) {
-        this.categoryId = newVal.categoryId;
-      },
-      immediate: true,
-    },
-  },
-
   methods: {
     async fetchData() {
-      return getBlogType();
+      return await getBlogType();
     },
 
     handleSelect(item) {
-      console.log("item", item);
-      console.log(this.categoryId, item.id);
       if (this.categoryId === item.id) return;
       this.$router.push({
         name: "categoryBlog",
         params: {
           categoryId: item.id,
+        },
+        query: {
+          pageNum: 1,
+          limit: this.$route.query.limit || 10,
         },
       });
     },
