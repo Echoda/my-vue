@@ -1,8 +1,7 @@
 <template>
   <Layout>
-    <template>
-      <LeftList />
-    </template>
+    <LeftList />
+
     <template #right>
       <RightList title="文章分类"></RightList>
     </template>
